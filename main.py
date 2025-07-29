@@ -1,6 +1,11 @@
 import tkinter
 
 
+def button_clicked():
+    result = round(float(entry.get()) * 1.6, 1)
+    converted_num.config(text=result)
+
+
 window = tkinter.Tk()
 window.title("Miles to km converter")
 window.config(padx=20, pady=20)
@@ -31,7 +36,7 @@ km_units.config(text="km")
 
 # row 3
 
-calculate_btn = tkinter.Button()
+calculate_btn = tkinter.Button(command=button_clicked)
 calculate_btn.grid(column=1, row=2)
 calculate_btn.config(text="Calculcate")
 
